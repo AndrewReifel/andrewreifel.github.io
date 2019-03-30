@@ -1,4 +1,4 @@
-# andrewreifel.github.io
+# IsEthereumDeadYet?
 
 static webpage
 
