@@ -1,12 +1,14 @@
 import json 
 import requests
+import os
 from flask import Flask, flash, redirect, render_template, request, session, url_for
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-
+    
+    
     r = requests.get('https://api.coinmarketcap.com/v1/ticker/ethereum/')
     
     for coin in r.json():
@@ -21,3 +23,4 @@ def index():
 
     #render index page with price
     return render_template("index.html", price=price)
+
